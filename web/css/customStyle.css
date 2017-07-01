@@ -1,0 +1,33 @@
+body
+{
+    background-color: #FFFFFF;
+}
+a
+{
+    color: #000000;
+}
+
+.custom-margin-top-lg
+{
+	margin-top: 150px;
+}
+.custom-margin-right-sm
+{
+	margin-right: 25px;
+}
+.custom-margin-left-sm
+{
+	margin-left: 25px;
+}
+.navbar-custom {
+    color: #FFFFFF;
+    background-color: #24292e;
+}
+.custom-content
+{
+	margin-left: 25px;
+}
+.text-dark
+{
+	color: #121212;
+}
