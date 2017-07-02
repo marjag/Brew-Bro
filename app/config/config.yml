@@ -54,6 +54,7 @@ doctrine:
         #   2. Uncomment database_path in parameters.yml.dist
         #   3. Uncomment next line:
         #path: '%database_path%'
+        unix_socket: /tmp/mysql.sock
 
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
@@ -67,3 +68,28 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+# FOSUser
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    from_email:
+        address:        brew-bro@example.com
+        sender_name:    Brew-Bro_support
+    registration:
+        confirmation:
+            enabled: true
+            from_email:
+                    address:        brew-bro@example.com
+                    sender_name:    Brew-Bro_support
+    resetting:
+        email:
+            from_email:
+                address:        brew-bro@example.com
+                sender_name:    Brew-Bro_support
+
+# EasyAdminBundle
+easy_admin:
+    entities:
+        - AppBundle\Entity\User
