@@ -6,12 +6,12 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
             <link rel="stylesheet" href="{{ asset('css/customStyle.css') }}" type="text/css"/>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('Icon.ico') }}" />
     </head>
     <body>
     {% block navBar %}
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" style="max-height: 50px;">
             <div class="navbar-header ">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -23,8 +23,9 @@
              </div>
              <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">O nas</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="{{ path('about') }}">O nas</a></li>
+                    <li><a href="{{ path('posts') }}">Receptury</a></li>
+                    <li><a href="{{ path('about') }}">Kontakt</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Moje konto<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -35,7 +36,11 @@
                     </li>
                     </ul>
                         <ul class="nav navbar-nav navbar-right custom-margin-right-sm">
-                        <li><a href="#">Zarejestruj się</a></li>
+                            <li><a>Brew - Panel </a></li>
+                            <li class="custom-margin-none"><a href="{{ path('brew-panel') }}"><span><img src="{{ asset('Logo-sm.png') }}" alt="beer-bro"></span></a></li>
+                            <li><a href="#">Szukaj <span class="glyphicon glyphicon-search"></span></a></li>
+                            <li><a href="#">Zarejestruj się</a></li>
+                        </ul>
                     </ul>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -51,4 +56,3 @@
     {% endblock %}
     </body>
 </html>
-<!-- d-block img-fluid
