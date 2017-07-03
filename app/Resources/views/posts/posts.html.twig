@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container custom-margin-top-md">
+	
+
+
+		{% for post in posts %}
+			<h2><a href={{ path('postDetails', {id:post.id}) }}>{{ post.title }}</a></h2>
+		{% endfor %}
+
+
+
+</div>
+{% endblock %}
