@@ -21,7 +21,6 @@ class PostViewController extends Controller
 	public function viewPostDetails(Post $post) : Response
 	{
 
-
 		return $this->render('posts/postDetails.html.twig', [
 			'post' => $post
 			]);

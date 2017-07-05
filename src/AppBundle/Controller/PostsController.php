@@ -19,7 +19,7 @@ class PostsController extends Controller
 	* @Route("/posts", name="posts")
 	*
 	*/
-	public function showPostsAction() : Response
+	public function showAllPostsAction() : Response
 	{
 		
 		$em = $this->getDoctrine()->getManager();

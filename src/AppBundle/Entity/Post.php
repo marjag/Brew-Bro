@@ -49,6 +49,12 @@ class Post
      */
     private $createdAt;
 
+    /**
+    *
+    *
+    * @ORM\ManyToOne(targetEntity="User", inversedBy="posts")
+    */
+    private $createdBy;
 
     /**
      * Get id

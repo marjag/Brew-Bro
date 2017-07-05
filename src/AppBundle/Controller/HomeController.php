@@ -15,8 +15,16 @@ class HomeController extends Controller
      */
     public function indexAction(Request $request) : Response
     {
-        return $this->render('home/index.html.twig', [
+    	$em = $this->getDoctrine()->getManager();
 
+		$posts = $em->getRepository('AppBundle:Post')->findBy(
+		    [],													//Bez WHERE
+		    ['id' => 'ASC'],									//ORDER
+		    5													//LIMIT
+		);
+
+        return $this->render('home/index.html.twig', [
+        	'posts' => $posts
         ]);
     }
 }

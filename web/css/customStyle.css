@@ -4,9 +4,23 @@ body
 }
 a
 {
-    color: #000000;
+    text-decoration: none;
+    color: inherit;
 }
-
+a:hover{
+	color: inherit;
+}
+.custom-link
+{
+	color: #006699;
+    text-decoration: none;
+    display: block;
+}
+.custom-link:hover
+{
+	color: #006699;
+    text-decoration: none;
+}
 .custom-margin-top-lg
 {
 	margin-top: 150px;
@@ -29,15 +43,65 @@ a
 	padding: 0px 0px 0px 0px;
 
 }
+.custom-margin-auto
+{
+	margin: auto;
+
+}
 .navbar-custom {
     color: #FFFFFF;
     background-color: #24292e;
 }
-.custom-content
-{
-	margin-left: 25px;
-}
 .text-dark
 {
 	color: #121212;
+}
+.footer {
+	position: fixed;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	padding: 1rem;
+    background-color: #353a3f;
+
+}
+.footer-content{
+	padding: 10px;
+	color: #cdcdcd;
+}
+.font-sm{
+	font-size: 12px;
+}
+.font-sm-md{
+	font-size: 18px;
+}
+.font-md{
+	font-size: 24px;
+}
+.font-lg{
+	font-size: 36px;
+}
+.glyph-fb{
+	color: #3b5998;
+}
+.glyph-twit{
+	color: #55acee;
+}
+.glyph-fb:hover{
+	color: #4c6aa9;
+}
+.glyph-twit:hover{
+	color: #66bdff;
+}
+.post-newest{
+	font-size: 120%;
+}
+.horizontal-tile
+{
+	height: 75px;
+	line-height: 75px;
+}
+.horizontal-tile:hover
+{
+	background-color: #E6E5E5;
 }

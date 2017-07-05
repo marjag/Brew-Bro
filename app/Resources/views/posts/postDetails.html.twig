@@ -1,11 +1,34 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="container custom-margin-top-md">
-	
+<div class="container-fluid">	
+	<div class="row">
+        <div class="col-md-3">
+        	<h4><b><span class="glyphicon glyphicon-book"></span> Surowce</b></h4>
+        	<p>{{ post.ingredients }}</p>
+        </div>
 
+
+        <div class="col-md-6">
+		<div class="post">
 		<h2>{{ post.title }}</h2>
+		<p>{{ post.description }}</p>
+		<span>Dodano {{ post.createdAt|date("Y-m-d H:i:s") }} przez:<b>%user%</b></span>
+	       </div>
+        </div>
 
 
+        <div class="col-md-3">
+        	<h1 class="text-center">
+        	<a href="#"><p class="glyphicon glyphicon-save-file text-center"></p></a>
+        	</h1>
+        	<p class="text-center">Do pobrania</p>
+        </div>
 
+
+	</div>
+	<hr>
+	<div class="container">
+	       <p><b>Komentarze</b></p>
+	</div>
 </div>
 {% endblock %}
