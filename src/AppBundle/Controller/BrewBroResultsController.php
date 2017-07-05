@@ -16,20 +16,17 @@ class BrewBroResultsController extends Controller
 {
 	
 	/**
-	* @Route("/brew-panel/brew-bro/{x}/{y}/{z}", name="brew-bro")
+	* @Route("/brew-panel/brew-bro", name="brew-bro")
 	*
 	*/
-	public function openBrewPanelAction(int $x,int $y,int $z) : Response
+	public function openBrewPanelAction() : Response
 	{
 
-		$brewBro = new BrewBro($x, $y, $z);
-		dump($brewBro);
 
 
 
 		return $this->render('brewPanel/brewBroResults.html.twig', [
-			'wynik' => $brewBro->calculateAlco()
-
+			'alco' => $brewBro->calculateAlco()
 			]);
 	}
 }

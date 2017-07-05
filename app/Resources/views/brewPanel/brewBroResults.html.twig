@@ -2,7 +2,13 @@
 {% block body %}
 <div class="container">
 
-	<h3>Wynik: {{ wynik }}</h3>
+	<h3>Parametry brzeczki</h3>
+	<p><b>Ekstrakt początkowy: </b>{{ form.extractInput }} BLG</p>
+	<p><b>Ekstrakt końcowy: </b>{{ form.extractOutput }} BLG</p>
+	<hr>
+	<p><b>Zawartość alkoholu, [% obj.]: <h5>{{ brewBro.alcoVol|round(3) }}</h5></b></p>
+	<p><b>Zawartość alkoholu, [% wag.]: <h5>{{ brewBro.alcoMass|round(3) }}</h5></b></p>
+
 
 </div>
 {% endblock %}
